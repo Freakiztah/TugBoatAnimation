@@ -1,0 +1,202 @@
+/* sun animation */
+
+#sun {
+
+    box-shadow:
+        0 0 0 0px #e2b633,
+        0 0 0 40px #FFDE0040,
+        0 0 0 60px #FFDE0020,
+        0 0 0 80px #FFDE0010,
+        0 0 0 100px #FFDE0000,
+        0 0 40px 100px #FFDE0010;
+    animation:
+        sunrise 2s infinite linear forwards,
+        rays 2s 2s infinite linear;
+}
+
+@keyframes sunrise {
+    0% {
+        box-shadow: none;
+    }
+}
+
+@keyframes rays {
+    0% {
+        box-shadow:
+            0 0 0 0 #e2b633,
+            0 0 0 20px #e2b633,
+            0 0 0 40px #FFDE0040,
+            0 0 0 60px #FFDE0020,
+            0 0 0 80px #FFDE0010,
+            0 0 40px 80px #FFDE0010;
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 20px #e2b633,
+            0 0 0 40px #FFDE0040,
+            0 0 0 60px #FFDE0020,
+            0 0 0 80px #FFDE0010,
+            0 0 0 100px #FFDE0000,
+            0 0 40px 100px #FFDE0010;
+    }
+}
+
+/* boat animation */
+
+@keyframes boatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#boat {
+ 
+    animation: boatAnimation 3s ease-in-out infinite;
+}
+
+@keyframes shadowAnimation {
+    0% {
+        transform: translateY(0);
+       
+    }
+
+    50% {
+        transform: translateY(-10px);
+        
+    }
+
+    100% {
+        transform: translateY(0);
+        
+    }
+}
+
+#shadow {
+
+    animation: shadowAnimation 3s ease-in-out infinite;
+}
+
+
+
+/* sea animation */
+
+@keyframes seaAnimation {
+    0% {
+        transform: translateY(0) scaleY(1);
+    }
+
+    50% {
+        transform: translateY(-10px) scaleY(1.05);
+    }
+
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+}
+
+
+#sea {
+ 
+    animation: seaAnimation 5s ease-in-out infinite;
+}
+
+/* smoke animation */
+
+@keyframes smokeAnimation {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(-100%, -100%) scale(2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-200%, -200%) scale(4);
+    }
+}
+
+.smoke {
+
+    background-image: url(../assets/images/Smoke.png);
+    background-size: cover;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0.1);
+    animation: smokeAnimation 3s ease infinite;
+}
+
+.smoke1 {
+    animation-delay: 0s;
+}
+
+.smoke2 {
+    animation-delay: 1s;
+}
+
+.smoke3 {
+    animation-delay: 2s;
+}
+
+
+/* clouds Animation */
+
+@keyframes cloudAnimation {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(150vw, -50%);
+    }
+}
+
+.cloud1 {
+    animation: cloud1 140s linear infinite;
+}
+
+@keyframes cloud1 {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(150vw, -50%);
+    }
+
+    0% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.cloud2 {
+    animation: cloudAnimation 135s linear infinite;
+}
+
+
+.cloud3 {
+
+    animation: cloudAnimation 115s linear infinite;
+}
+
+.cloud4 {
+
+    animation: cloudAnimation 220s linear infinite;
+}
+
+
+.cloud5 {
+
+    animation: cloudAnimation 300s linear infinite;
+}
